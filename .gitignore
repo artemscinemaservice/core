@@ -39,6 +39,7 @@ Thumbs.db
 # ------------------------------
 # IDE / Editors
 # ------------------------------
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
@@ -85,7 +86,7 @@ tmp/
 .nx/workspace-data/
 
 # ------------------------------
-# Prisma (если используешь)
+# Prisma
 # ------------------------------
 prisma/dev.db
 prisma/dev.db-journal
