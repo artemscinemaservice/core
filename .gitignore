@@ -1,0 +1,104 @@
+# ------------------------------
+# Dependencies
+# ------------------------------
+node_modules/
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ------------------------------
+# Build output (NestJS)
+# ------------------------------
+dist/
+build/
+out/
+.tmp/
+.temp/
+
+# ------------------------------
+# Environment
+# ------------------------------
+.env
+.env.*
+!.env.example
+
+# ------------------------------
+# Logs
+# ------------------------------
+logs/
+*.log
+
+# ------------------------------
+# OS files
+# ------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# IDE / Editors
+# ------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ------------------------------
+# Coverage / Testing
+# ------------------------------
+coverage/
+.nyc_output/
+jest.config.tsbuildinfo
+
+# ------------------------------
+# TypeScript
+# ------------------------------
+*.tsbuildinfo
+
+# ------------------------------
+# Docker
+# ------------------------------
+docker-compose.override.yml
+
+# ------------------------------
+# NestJS specific
+# ------------------------------
+*.pid
+*.seed
+*.tgz
+
+# ------------------------------
+# Microservices / Monorepo (NX / Nest workspace)
+# ------------------------------
+dist/apps/
+dist/libs/
+tmp/
+.cache/
+.nx/cache/
+.nx/workspace-data/
+
+# ------------------------------
+# Prisma (если используешь)
+# ------------------------------
+prisma/dev.db
+prisma/dev.db-journal
+
+# ------------------------------
+# Uploads / temp files
+# ------------------------------
+uploads/
+tmp/
+
+# ------------------------------
+# Misc
+# ------------------------------
+*.swp
+*.bak
+*.orig

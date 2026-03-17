@@ -1,0 +1,19 @@
+{
+  "name": "@artemscinemaservice/core",
+  "version": "1.0.0",
+  "description": "Core module for cinema service",
+  "license": "ISC",
+  "type": "commonjs",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2"
+  },
+  "exports": {
+    "prettier": "./src/prettier.config.js"
+  }
+}
