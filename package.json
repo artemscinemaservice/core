@@ -1,6 +1,6 @@
 {
   "name": "@artemscinemaservice/core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Core module for cinema service",
   "license": "ISC",
   "type": "commonjs",
@@ -15,5 +15,6 @@
   },
   "exports": {
     "prettier": "./src/prettier.config.js"
-  }
+  },
+  "files": ["src", "package.json", "yarn.lock", ".gitignore"]
 }
