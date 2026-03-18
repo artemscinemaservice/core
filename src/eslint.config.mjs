@@ -17,6 +17,7 @@ export default [
       parser: tsParser,
       parserOptions: {
         sourceType: "module",
+        project: true,
       },
     },
     plugins: {
