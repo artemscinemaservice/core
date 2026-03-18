@@ -8,13 +8,27 @@
     "access": "public"
   },
   "peerDependencies": {
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "eslint": "^9",
+    "@typescript-eslint/parser": "^7",
+    "@typescript-eslint/eslint-plugin": "^7",
+    "typescript": "^5"
   },
   "dependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^5.2.2"
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "eslint-config-prettier": "^9",
+    "eslint-plugin-prettier": "^5",
+    "eslint-plugin-import": "^2",
+    "eslint-import-resolver-typescript": "^3"
   },
   "exports": {
-    "prettier": "./src/prettier.config.js"
+    "prettier": "./src/prettier.config.js",
+    "eslint": "./src/eslint.config.js"
   },
-  "files": ["src", "package.json", "yarn.lock", ".gitignore"]
+  "files": [
+    "src",
+    "package.json",
+    "yarn.lock",
+    ".gitignore"
+  ]
 }
