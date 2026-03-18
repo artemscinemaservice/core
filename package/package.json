@@ -22,8 +22,8 @@
     "eslint-import-resolver-typescript": "^3"
   },
   "exports": {
-    "./prettier": "./src/prettier.config.js",
-    "./eslint": "./src/eslint.config.js"
+    "prettier": "./src/prettier.config.js",
+    "eslint": "./src/eslint.config.js"
   },
   "files": [
     "src",
