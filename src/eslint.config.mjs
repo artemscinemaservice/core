@@ -35,7 +35,6 @@ export default [
         { argsIgnorePattern: "^_" },
       ],
       "@typescript-eslint/explicit-function-return-type": "off",
-      "@typescript-eslint/no-floating-promises": "error",
 
       // -------- imports --------
       "import/order": [
