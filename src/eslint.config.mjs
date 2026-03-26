@@ -69,14 +69,10 @@ export default [
         {
           selector: "class",
           format: ["PascalCase"],
-          suffix: ["Dto", "Entity", "Service", "Controller"],
+          suffix: ["Dto", "Entity", "Service", "Controller", "Module", "Repository"],
         },
       ],
-
-      "@typescript-eslint/no-unsafe-assignment": "warn",
-
       "@typescript-eslint/require-await": "warn",
-
       "no-console": ["warn", { allow: ["warn", "error"] }],
     },
   },

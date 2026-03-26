@@ -28,7 +28,6 @@
   "files": [
     "src",
     "package.json",
-    "yarn.lock",
-    ".gitignore"
+    "yarn.lock"
   ]
 }
