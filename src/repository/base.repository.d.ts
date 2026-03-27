@@ -1,6 +1,4 @@
-export type BaseRepositoryMethod = (
-	args: unknown
-) => PromiseLike<unknown> | unknown;
+export type BaseRepositoryMethod = (...args: any[]) => any;
 
 export interface BaseRepositoryCrudDelegate {
 	findUnique: BaseRepositoryMethod;
