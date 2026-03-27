@@ -23,7 +23,11 @@
   },
   "exports": {
     "./prettier": "./src/prettier.config.mjs",
-    "./eslint": "./src/eslint.config.mjs"
+    "./eslint": "./src/eslint.config.mjs",
+    "./repository": {
+      "types": "./src/repository/index.d.ts",
+      "default": "./src/repository/index.js"
+    }
   },
   "files": [
     "src",
