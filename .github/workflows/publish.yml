@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -14,6 +17,42 @@ jobs:
         with:
           node-version: 20
           registry-url: "https://registry.npmjs.org"
+      - name: Read package metadata
+        id: package
+        run: |
+          VERSION=$(jq -r .version package.json)
+          NAME=$(jq -r .name package.json)
+
+          echo "package_version=$VERSION" >> $GITHUB_OUTPUT
+          echo "package_name=$NAME" >> $GITHUB_OUTPUT
+      - name: Check GitHub release status
+        id: release_status
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release list | grep -q "v${{ steps.package.outputs.package_version }}"; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Create GitHub release
+        if: steps.release_status.outputs.exists != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PACKAGE_NAME: ${{ steps.package.outputs.package_name }}
+          PACKAGE_VERSION: ${{ steps.package.outputs.package_version }}
+        run: |
+          printf 'Published `%s@%s` to npm.\n\nPackage: https://www.npmjs.com/package/%s\n' \
+            "${PACKAGE_NAME}" \
+            "${PACKAGE_VERSION}" \
+            "${PACKAGE_NAME}" \
+            > release-notes.md
+
+          gh release create "v${PACKAGE_VERSION}" \
+            --target "${GITHUB_SHA}" \
+            --title "v${PACKAGE_VERSION}" \
+            --generate-notes \
+            --notes-file release-notes.md
