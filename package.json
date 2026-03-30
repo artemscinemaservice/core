@@ -22,11 +22,19 @@
     "eslint-import-resolver-typescript": "^3"
   },
   "exports": {
-    "./prettier": "./src/prettier.config.mjs",
-    "./eslint": "./src/eslint.config.mjs",
+    "./prettier": "./src/config/prettier.config.mjs",
+    "./eslint": "./src/config/eslint.config.mjs",
     "./repository": {
       "types": "./src/repository/index.d.ts",
+      "import": "./src/repository/index.mjs",
+      "require": "./src/repository/index.js",
       "default": "./src/repository/index.js"
+    },
+    "./enums": {
+      "types": "./src/enums/index.d.ts",
+      "import": "./src/enums/index.mjs",
+      "require": "./src/enums/index.js",
+      "default": "./src/enums/index.js"
     }
   },
   "files": [
