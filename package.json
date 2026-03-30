@@ -1,6 +1,6 @@
 {
   "name": "@artemscinemaservice/core",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Core module for cinema service",
   "license": "ISC",
   "type": "commonjs",
